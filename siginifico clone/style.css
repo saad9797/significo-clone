@@ -1,0 +1,77 @@
+:root{
+    --salmon:#EF9D71;
+    --black:#000;
+    --white:#fff;
+    --cyan:#AEDEE0 ;
+    --dsalmon:#000000;
+    --dcyan: #1f2f32;
+}
+
+body{
+    transition: background-color ease-out .5s;
+}
+
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+    /* var clip ko ham value assign krsskhte hain or woh utna percent cut hojayega circle me or center ke respect me cut krne ke lie 50% x axis and 50% y axis
+    jese jese clip ki value html me change ho wese wese css update horhi hai or va;ue js change kr rhi hai*/
+}
+
+
+
+*::selection{
+    background-color: var(--salmon);
+    /* color: var(--dsalmon); */
+}
+body[theme="black"]{
+    background-color: var(--black);
+}
+body[theme="black"] .section{
+    color: var(--white);
+}
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="cyan"] .section{
+    color: var(--dcyan);
+}
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+body[theme="salmon"] .section{
+    color: var(--dsalmon);
+}
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="white"] .section{
+    color: var(--black);
+}
+
+
+@font-face {
+    font-family: 'PPNeueMachina';
+    src: url('./659dbdfd5a080be8d348316e_PP Neue Machina Inktrap Medium.ttf') format('truetype');
+    font-style: normal;
+}
+/* Tailwind utility for custom font */
+.font-pp-neue-machina { 
+    font-family: 'PPNeueMachina', sans-serif;
+}
+
+@font-face {
+    font-family: 'PPNeueMachinalight';
+    src: url('659dbdfd5a080be8d348316f_PPNeueMachina_ Light.ttf') format('truetype');
+    font-style: normal;
+}
+/* Tailwind utility for custom font */
+.font-pp-neue-machina-light { 
+    font-family: 'PPNeueMachinaLight', sans-serif;
+}
+
+.para-text2 ,.para-text{
+    /* Ensure the container has block or inline-block display to allow for margin and padding adjustments */
+    display: inline-block; /* or block, flex, etc., depending on your layout needs */
+}
+
+
